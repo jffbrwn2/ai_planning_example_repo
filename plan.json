@@ -1,3 +1,4 @@
+# Extracted from https://www.nature.com/articles/s41587-024-02248-6
 {
     "goal": "Design system to measure TCR-HLA interaction using a SrtA proximity labeling method",
     "outcome": "Flow cytometry data showing specific biotinylation of target cells expressing cognate peptide-MHC complexes",
