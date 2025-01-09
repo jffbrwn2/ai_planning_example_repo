@@ -1,0 +1,565 @@
+{
+    "goal": "Design system to measure TCR-HLA interaction using a SrtA proximity labeling method",
+    "outcome": "Flow cytometry data showing specific biotinylation of target cells expressing cognate peptide-MHC complexes",
+    "subgoals": [
+      {
+        "goal": "Generate TCR-MAP Jurkat cell lines",
+        "outcome": "Flow cytometry data confirming expression of TCR, CD4/CD8 coreceptor, and NFAT-mCD40L-SrtA reporter in Jurkat cells",
+        "subgoals": [
+          {
+            "goal": "Prepare TCR expression vector",
+            "outcome": "pHAGE-EF1\u03b1-DEST-PGK-Bsd or pHAGE-EF1\u03b1-DEST-PGK-ZsGreen vector with TCR genes",
+            "subgoals": [
+              {
+                "goal": "Obtain codon-optimized TCR gene templates",
+                "outcome": "Synthesized codon-optimized TCR gene templates",
+                "protocol": "Gene synthesis",
+                "materials": [
+                  "TCR sequence information",
+                  "Twist Biosciences gene synthesis service"
+                ]
+              },
+              {
+                "goal": "Amplify TCR genes",
+                "outcome": "PCR-amplified V-CDR3-J domains fused to mouse or human TCR constant regions",
+                "protocol": "PCR amplification",
+                "materials": [
+                  "Codon-optimized TCR gene templates",
+                  "PCR primers",
+                  "High-fidelity DNA polymerase",
+                  "dNTPs",
+                  "PCR thermal cycler"
+                ]
+              },
+              {
+                "goal": "Clone TCR genes into expression vector",
+                "outcome": "pHAGE-EF1\u03b1-DEST-PGK-Bsd or pHAGE-EF1\u03b1-DEST-PGK-ZsGreen vector with TCR genes",
+                "protocol": "Subcloning",
+                "materials": [
+                  "pHAGE-EF1\u03b1-DEST-PGK-Bsd or pHAGE-EF1\u03b1-DEST-PGK-ZsGreen vector",
+                  "PCR-amplified TCR genes",
+                  "Restriction enzymes",
+                  "T4 DNA ligase",
+                  "Competent E. coli",
+                  "LB agar plates with appropriate antibiotic"
+                ]
+              }
+            ]
+          },
+          {
+            "goal": "Produce lentivirus encoding TCR genes",
+            "outcome": "Quantified viral titer of lentivirus containing codon-optimized TCR genes",
+            "protocol": "Lentiviral production",
+            "materials": [
+              "pHAGE-EF1\u03b1-DEST-PGK-Bsd or pHAGE-EF1\u03b1-DEST-PGK-ZsGreen vector with TCR genes",
+              "HEK-293T cells",
+              "pMD2.G plasmid",
+              "psPAX2 plasmid",
+              "PolyJet In Vitro DNA Transfection Reagent"
+            ]
+          },
+          {
+            "goal": "Introduce TCR of interest",
+            "outcome": "Jurkat cells expressing desired TCR",
+            "protocol": "Lentiviral transduction",
+            "materials": [
+              "TCR\u03b2-null Jurkat cells (J.RT3-T3.5)",
+              "Lentivirus encoding TCR genes",
+              "8 \u03bcg ml^-1 polybrene"
+            ]
+          },
+          {
+            "goal": "Verify TCR expression",
+            "outcome": "Confirmed surface expression of introduced TCR",
+            "protocol": "Flow cytometry",
+            "materials": [
+              "Transduced Jurkat cells",
+              "Fluorophore-conjugated anti-TCR antibodies",
+              "LSR-II or CytoFLEX flow cytometer",
+              "FlowJo analysis software"
+            ]
+          },
+          {
+            "goal": "Prepare coreceptor expression vector",
+            "outcome": "pHAGE-EF1\u03b1-DEST vector with CD4 or CD8 genes",
+            "subgoals": [
+              {
+                "goal": "Obtain CD4 or CD8 gene templates",
+                "outcome": "Synthesized CD4 or CD8 gene templates",
+                "protocol": "Gene synthesis",
+                "materials": [
+                  "CD4 or CD8 sequence information",
+                  "IDT gene synthesis service"
+                ]
+              },
+              {
+                "goal": "Amplify CD4 or CD8 genes",
+                "outcome": "PCR-amplified CD4 or CD8 genes, including modified CD4 for mouse class II antigen discovery",
+                "protocol": "PCR amplification",
+                "materials": [
+                  "CD4 or CD8 gene templates",
+                  "PCR primers",
+                  "High-fidelity DNA polymerase",
+                  "dNTPs",
+                  "PCR thermal cycler"
+                ]
+              },
+              {
+                "goal": "Clone coreceptor genes into expression vector",
+                "outcome": "pHAGE-EF1\u03b1-DEST vector with CD4 or CD8 genes",
+                "protocol": "Gateway cloning",
+                "materials": [
+                  "pHAGE-EF1\u03b1-DEST vector",
+                  "PCR-amplified CD4 or CD8 genes",
+                  "Gateway BP Clonase II enzyme mix",
+                  "Gateway LR Clonase II enzyme mix",
+                  "Competent E. coli",
+                  "LB agar plates with appropriate antibiotic"
+                ]
+              },
+              {
+                "goal": "Verify coreceptor gene insertion",
+                "outcome": "Confirmed presence and correct orientation of CD4 or CD8 genes in pHAGE-EF1\u03b1-DEST vector",
+                "subgoals": [
+                  {
+                    "goal": "Perform DNA sequencing",
+                    "outcome": "Sequencing results confirming correct insertion and orientation of coreceptor genes",
+                    "protocol": "DNA sequencing",
+                    "materials": [
+                      "Purified plasmid DNA from transformed E. coli",
+                      "Sequencing primers",
+                      "DNA sequencing service"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "goal": "Produce lentivirus encoding coreceptor genes",
+            "outcome": "Quantified viral titer of lentivirus containing CD4 or CD8 genes",
+            "protocol": "Lentiviral production",
+            "materials": [
+              "pHAGE-EF1\u03b1-DEST vector with CD4 or CD8 genes",
+              "HEK-293T cells",
+              "pMD2.G plasmid",
+              "psPAX2 plasmid",
+              "PolyJet In Vitro DNA Transfection Reagent"
+            ]
+          },
+          {
+            "goal": "Introduce CD4 or CD8 coreceptor",
+            "outcome": "Jurkat cells expressing appropriate coreceptor",
+            "protocol": "Lentiviral transduction",
+            "materials": [
+              "TCR-expressing Jurkat cells",
+              "Lentivirus encoding CD4 or CD8 genes",
+              "8 \u03bcg ml^-1 polybrene"
+            ]
+          },
+          {
+            "goal": "Prepare NFAT-mCD40L-SrtA reporter vector",
+            "outcome": "Inducible expression vector with mCD40L-SrtA, NFAT response elements, and minimal IL-2 promoter",
+            "subgoals": [
+              {
+                "goal": "Amplify mCD40L-SrtA gene",
+                "outcome": "PCR-amplified mCD40L-SrtA gene",
+                "protocol": "PCR amplification",
+                "materials": [
+                  "Flag-SrtA-mCD40L plasmid",
+                  "PCR primers",
+                  "High-fidelity DNA polymerase",
+                  "dNTPs",
+                  "PCR thermal cycler"
+                ]
+              },
+              {
+                "goal": "Prepare NFAT response elements and minimal IL-2 promoter",
+                "outcome": "NFAT response elements and minimal IL-2 promoter sequences",
+                "protocol": "DNA synthesis",
+                "materials": [
+                  "NFAT response element sequence information",
+                  "Minimal IL-2 promoter sequence information",
+                  "DNA synthesis service"
+                ]
+              },
+              {
+                "goal": "Assemble NFAT-mCD40L-SrtA reporter components",
+                "outcome": "Assembled inducible expression vector with mCD40L-SrtA, NFAT response elements, and minimal IL-2 promoter",
+                "protocol": "DNA assembly",
+                "materials": [
+                  "Inducible expression vector backbone",
+                  "PCR-amplified mCD40L-SrtA gene",
+                  "NFAT response elements",
+                  "Minimal IL-2 promoter sequence",
+                  "DNA assembly reagents",
+                  "Competent E. coli",
+                  "LB agar plates with appropriate antibiotic"
+                ]
+              }
+            ]
+          },
+          {
+            "goal": "Produce lentivirus encoding NFAT-mCD40L-SrtA reporter",
+            "outcome": "Quantified viral titer of lentivirus containing NFAT-mCD40L-SrtA construct",
+            "protocol": "Lentiviral production",
+            "materials": [
+              "Inducible expression vector with NFAT-mCD40L-SrtA components",
+              "HEK-293T cells",
+              "pMD2.G plasmid",
+              "psPAX2 plasmid",
+              "PolyJet In Vitro DNA Transfection Reagent"
+            ]
+          },
+          {
+            "goal": "Introduce NFAT-mCD40L-SrtA reporter",
+            "outcome": "Jurkat cells with inducible mCD40L-SrtA expression",
+            "protocol": "Lentiviral transduction",
+            "materials": [
+              "TCR and coreceptor-expressing Jurkat cells",
+              "Lentivirus encoding NFAT-mCD40L-SrtA construct",
+              "8 \u03bcg ml^-1 polybrene"
+            ]
+          },
+          {
+            "goal": "Verify expression of introduced constructs",
+            "outcome": "Flow cytometry data confirming surface expression of TCR, CD4/CD8, and mCD40L-SrtA activation upon stimulation",
+            "protocol": "Flow cytometry",
+            "materials": [
+              "Modified Jurkat cells",
+              "Fluorophore-conjugated antibodies specific for TCR and CD4/CD8",
+              "Anti-mouse CD154 (CD40L) antibody for mCD40L-SrtA activation detection",
+              "LSR-II or CytoFLEX flow cytometer"
+            ]
+          }
+        ]
+      },
+      {
+        "goal": "Generate TCR-MAP target cell lines",
+        "outcome": "Flow cytometry data confirming expression of desired HLA allele and G5-mCD40 on HEK-293T cell surface",
+        "subgoals": [
+          {
+            "goal": "Generate HLA-null HEK-293T cells",
+            "outcome": "Flow cytometry data showing absence of HLA expression on HEK-293T cell surface",
+            "subgoals": [
+              {
+                "goal": "Prepare CRISPR-Cas9 components",
+                "outcome": "Verified and quantified CRISPR-Cas9 components for transfection",
+                "protocol": "Reagent preparation",
+                "materials": [
+                  "Cas9 protein (Thermo Fisher Scientific, A36499)",
+                  "sgRNAs targeting HLA-A, HLA-B, HLA-C, HLA-DPB1, HLA-DPA1, HLA-DQB1, HLA-DQA1, HLA-DRA, HLA-DRB1, and HLA-DRB5 (Invitrogen TrueGuide Synthetic gRNAs, A35510)",
+                  "Lipofectamine CRISPRMAX Cas9 Transfection Reagent (Thermo Fisher Scientific, CMAX00003)",
+                  "Opti-MEM medium"
+                ]
+              },
+              {
+                "goal": "Transfect HEK-293T cells with CRISPR-Cas9 components",
+                "outcome": "Transfected HEK-293T cells with confirmed Cas9 expression",
+                "protocol": "Lipid-mediated transfection",
+                "materials": [
+                  "HEK-293T cells",
+                  "Prepared CRISPR-Cas9 components",
+                  "Opti-MEM medium"
+                ]
+              },
+              {
+                "goal": "Select and isolate HLA-null cells",
+                "outcome": "Pure population of HLA-null HEK-293T cells",
+                "protocol": "Single-cell cloning",
+                "materials": [
+                  "Transfected HEK-293T cells",
+                  "Fluorophore-conjugated anti-HLA antibodies",
+                  "Flow cytometer with cell sorting capability",
+                  "96-well plates"
+                ]
+              },
+              {
+                "goal": "Verify HLA knockout efficiency",
+                "outcome": "Flow cytometry data confirming absence of HLA expression on cell surface of isolated clones",
+                "protocol": "Flow cytometry",
+                "materials": [
+                  "HLA-null HEK-293T cell clones",
+                  "Fluorophore-conjugated anti-HLA antibodies (APC anti-human HLA-A, HLA-B and HLA-C, clone W6/32; APC anti-human HLA-DR, HLA-DP and HLA-DQ, clone Tu39)",
+                  "LSR-II or CytoFLEX flow cytometer",
+                  "FlowJo analysis software"
+                ]
+              }
+            ]
+          },
+          {
+            "goal": "Prepare HLA allele expression vector",
+            "outcome": "pHAGE-EF1\u03b1-DEST expression vector with desired HLA allele",
+            "subgoals": [
+              {
+                "goal": "Obtain HLA allele sequence",
+                "outcome": "Verified HLA allele sequence",
+                "protocol": "Database retrieval",
+                "materials": [
+                  "Computer with internet access",
+                  "IPD-IMGT/HLA database"
+                ]
+              },
+              {
+                "goal": "Synthesize HLA allele",
+                "outcome": "Synthesized HLA allele DNA",
+                "protocol": "Gene synthesis",
+                "materials": [
+                  "HLA allele sequence",
+                  "gBlocks Gene Fragments (IDT)"
+                ]
+              },
+              {
+                "goal": "Clone HLA allele into expression vector",
+                "outcome": "pHAGE-EF1\u03b1-DEST expression vector with desired HLA allele",
+                "protocol": "Gateway cloning",
+                "materials": [
+                  "pHAGE-EF1\u03b1-DEST expression vector",
+                  "Synthesized HLA allele DNA",
+                  "Gateway BP Clonase II enzyme mix",
+                  "Gateway LR Clonase II enzyme mix",
+                  "Competent E. coli",
+                  "LB agar plates with appropriate antibiotic"
+                ]
+              }
+            ]
+          },
+          {
+            "goal": "Produce lentivirus encoding desired HLA allele",
+            "outcome": "Quantified viral titer of lentivirus containing specific HLA allele",
+            "protocol": "Lentiviral production",
+            "materials": [
+              "pHAGE-EF1\u03b1-DEST expression vector with desired HLA allele",
+              "HEK-293T cells",
+              "pMD2.G plasmid",
+              "psPAX2 plasmid",
+              "PolyJet In Vitro DNA Transfection Reagent"
+            ]
+          },
+          {
+            "goal": "Introduce desired HLA allele",
+            "outcome": "HLA-null cells expressing specific HLA allele",
+            "protocol": "Lentiviral transduction",
+            "materials": [
+              "HLA-null HEK-293T cells",
+              "Lentivirus encoding desired HLA allele",
+              "8 \u03bcg ml^-1 polybrene"
+            ]
+          },
+          {
+            "goal": "Select transduced cells",
+            "outcome": "Population of cells expressing the desired HLA allele",
+            "protocol": "Antibiotic selection",
+            "materials": [
+              "Transduced HEK-293T cells",
+              "Appropriate antibiotic based on the vector used"
+            ]
+          },
+          {
+            "goal": "Verify HLA expression",
+            "outcome": "Confirmation of HLA expression on the cell surface",
+            "protocol": "Flow cytometry",
+            "materials": [
+              "Selected HEK-293T cells",
+              "Fluorophore-conjugated anti-HLA antibodies",
+              "Flow cytometer"
+            ]
+          },
+          {
+            "goal": "Introduce CIITA and CTSS (for class II presentation)",
+            "outcome": "Cells expressing CIITA and CTSS for efficient class II antigen processing and presentation",
+            "protocol": "Lentiviral transduction",
+            "materials": [
+              "HLA-expressing HEK-293T cells",
+              "Lentivirus containing EF1\u03b1 promoter driving expression of CIITA and CTSS",
+              "8 \u03bcg ml^-1 polybrene"
+            ]
+          },
+          {
+            "goal": "Sort cells for high HLA II expression",
+            "outcome": "Population of cells with high HLA class II expression",
+            "protocol": "Fluorescence-activated cell sorting",
+            "materials": [
+              "Transduced cells",
+              "Fluorophore-conjugated anti-HLA class II antibodies",
+              "Cell sorter"
+            ]
+          },
+          {
+            "goal": "Prepare G5-mCD40 construct",
+            "outcome": "EF1\u03b1-G5-mCD40-neomycin vector ready for lentiviral production",
+            "protocol": "Molecular cloning",
+            "materials": [
+              "G5\u2013Myc\u2013mCD40 plasmid from Gabriel Victora",
+              "pHAGE-EF1\u03b1-DEST-PGK-neomycin vector",
+              "Restriction enzymes",
+              "T4 DNA ligase",
+              "Competent E. coli",
+              "LB agar plates with appropriate antibiotic"
+            ]
+          },
+          {
+            "goal": "Produce lentivirus encoding G5-mCD40 construct",
+            "outcome": "Quantified viral titer of lentivirus containing G5-mCD40 gene",
+            "protocol": "Lentiviral production",
+            "materials": [
+              "EF1\u03b1-G5-mCD40-neomycin vector",
+              "HEK-293T cells",
+              "pMD2.G plasmid",
+              "psPAX2 plasmid",
+              "PolyJet In Vitro DNA Transfection Reagent"
+            ]
+          },
+          {
+            "goal": "Introduce G5-mCD40 construct",
+            "outcome": "Target cells expressing G5-mCD40 SrtA substrate",
+            "protocol": "Lentiviral transduction",
+            "materials": [
+              "HLA-expressing HEK-293T cells",
+              "Lentivirus encoding G5-mCD40",
+              "8 \u03bcg ml^-1 polybrene"
+            ]
+          },
+          {
+            "goal": "Verify expression of introduced constructs",
+            "outcome": "Flow cytometry data confirming surface expression of HLA allele and G5-mCD40",
+            "protocol": "Flow cytometry",
+            "materials": [
+              "Modified HEK-293T cells",
+              "Fluorophore-conjugated antibodies specific for HLA",
+              "Anti-mouse CD40 antibody for G5-mCD40 detection",
+              "LSR-II or CytoFLEX flow cytometer"
+            ]
+          }
+        ]
+      },
+      {
+        "goal": "Perform TCR-MAP coculture assay",
+        "outcome": "Flow cytometry data showing specific biotinylation of target cells expressing cognate peptide-MHC complexes",
+        "subgoals": [
+          {
+            "goal": "Prepare peptide antigens",
+            "outcome": "Synthetic peptides for antigen loading",
+            "protocol": "Peptide synthesis",
+            "materials": [
+              "GenScript custom peptide synthesis service"
+            ]
+          },
+          {
+            "goal": "Prepare antigen expression vectors",
+            "outcome": "pHAGE-CMV-Nflag-HA-DEST-IRES-Puro vector (for class I) or pHAGE-CMV-CD741\u201380-DEST-PGK-Puro vector (for class II) with antigen gene fragments",
+            "subgoals": [
+              {
+                "goal": "Obtain antigen gene templates",
+                "outcome": "Synthesized antigen gene templates",
+                "protocol": "Gene synthesis",
+                "materials": [
+                  "Antigen sequence information",
+                  "IDT gene synthesis service"
+                ]
+              },
+              {
+                "goal": "Amplify antigen gene fragments",
+                "outcome": "PCR-amplified antigen gene fragments",
+                "protocol": "PCR amplification",
+                "materials": [
+                  "Antigen gene templates",
+                  "PCR primers",
+                  "High-fidelity DNA polymerase",
+                  "dNTPs",
+                  "PCR thermal cycler"
+                ]
+              },
+              {
+                "goal": "Clone antigen fragments into expression vectors",
+                "outcome": "pHAGE-CMV-Nflag-HA-DEST-IRES-Puro vector (for class I) or pHAGE-CMV-CD741\u201380-DEST-PGK-Puro vector (for class II) with antigen gene fragments",
+                "protocol": "Gateway cloning",
+                "materials": [
+                  "pHAGE-CMV-Nflag-HA-DEST-IRES-Puro vector",
+                  "pHAGE-CMV-CD741\u201380-DEST-PGK-Puro vector",
+                  "PCR-amplified antigen gene fragments",
+                  "Gateway BP Clonase II enzyme mix",
+                  "Gateway LR Clonase II enzyme mix",
+                  "Competent E. coli",
+                  "LB agar plates with appropriate antibiotic"
+                ]
+              }
+            ]
+          },
+          {
+            "goal": "Produce lentivirus encoding antigen fragments",
+            "outcome": "Quantified viral titer of lentivirus containing antigen gene fragments",
+            "protocol": "Lentiviral production",
+            "materials": [
+              "pHAGE-CMV-Nflag-HA-DEST-IRES-Puro vector (for class I) or pHAGE-CMV-CD741\u201380-DEST-PGK-Puro vector (for class II) with antigen gene fragments",
+              "HEK-293T cells",
+              "pMD2.G plasmid",
+              "psPAX2 plasmid",
+              "PolyJet In Vitro DNA Transfection Reagent"
+            ]
+          },
+          {
+            "goal": "Load target cells with peptide antigen",
+            "outcome": "Target cells presenting specific peptide-MHC complexes",
+            "protocol": "Peptide pulsing",
+            "materials": [
+              "TCR-MAP target cells",
+              "Synthetic peptides",
+              "Cell culture medium"
+            ]
+          },
+          {
+            "goal": "Load target cells with endogenous antigen",
+            "outcome": "Target cells presenting specific peptide-MHC complexes",
+            "protocol": "Lentiviral transduction",
+            "materials": [
+              "TCR-MAP target cells",
+              "Lentivirus encoding antigen fragments",
+              "8 \u03bcg ml^-1 polybrene"
+            ]
+          },
+          {
+            "goal": "Prepare LPETG-biotin substrate",
+            "outcome": "LPETG-biotin substrate for SrtA-mediated biotinylation",
+            "protocol": "Substrate reconstitution",
+            "materials": [
+              "Biotin\u2013aminohexanoic acid\u2013LPETGS (LifeTein)",
+              "PBS"
+            ]
+          },
+          {
+            "goal": "Coculture TCR-MAP Jurkat and target cells",
+            "outcome": "Activation of TCR-MAP Jurkats and biotinylation of cognate targets",
+            "protocol": "Cell coculture",
+            "materials": [
+              "TCR-MAP Jurkat cells",
+              "Antigen-loaded target cells",
+              "50 \u03bcM LPETG-biotin substrate",
+              "Cell culture medium",
+              "37\u00b0C, 5% CO2 incubator"
+            ]
+          },
+          {
+            "goal": "Prepare detection reagents",
+            "outcome": "Reconstituted fluorophore-conjugated streptavidin for flow cytometry",
+            "protocol": "Reagent reconstitution",
+            "materials": [
+              "BV421 streptavidin (BioLegend)",
+              "PBS with 0.5% BSA and 2 mM phosphate-buffered EDTA (PBE)"
+            ]
+          },
+          {
+            "goal": "Detect biotinylated target cells",
+            "outcome": "Flow cytometry data showing quantification of biotinylated target cells as a measure of TCR-pMHC interaction",
+            "protocol": "Flow cytometry",
+            "materials": [
+              "Cocultured cells",
+              "BV421 streptavidin",
+              "LSR-II or CytoFLEX flow cytometer",
+              "FlowJo analysis software"
+            ]
+          }
+        ]
+      }
+    ]
+  }
